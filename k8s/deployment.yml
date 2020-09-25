@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: on-boarding-application
-          image: gcr.io/be-inoue-kazuya/ino-kzy-first-application:latest
+          image: gcr.io/be-inoue-kazuya/ino-kzy-first-application@sha256:11cd325cba93b7ec9c2ce15e9b22d67189b17eecf8a5c866492473637b54d26e
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
