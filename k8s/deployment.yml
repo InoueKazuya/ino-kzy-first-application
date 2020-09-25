@@ -16,13 +16,10 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: on-boarding-application
+  labels:
+    app: on-boarding-application
 spec:
   replicas: 3
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5
   template:
     metadata:
       labels:
@@ -30,11 +27,7 @@ spec:
     spec:
       containers:
         - name: on-boarding-application
-          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          image: gcr.io/be-inoue-kazuya/ino-kzy-first-application:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          resources:
-            requests:
-              cpu: 100m
-            limits:
-              cpu: 100m
