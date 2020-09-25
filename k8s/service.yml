@@ -6,7 +6,6 @@ metadata:
     cloud.google.com/load-balancer-type: "Internal"
 spec:
   type: LoadBalancer
-  loadBalancerIP: 10.146.0.1
   selector:
     app: on-boarding-application
   ports:
